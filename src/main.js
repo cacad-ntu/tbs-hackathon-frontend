@@ -5,6 +5,17 @@ import App from './App';
 import router from './router';
 import store from './store';
 
+// import vue material
+import VueMaterial from 'vue-material';
+import VueResource from 'vue-resource';
+import 'vue-material/dist/vue-material.min.css';
+import 'vue-material/dist/theme/default.css';
+
+// add vue material as plugin
+Vue.use(VueMaterial);
+Vue.use(VueResource);
+
+
 Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
