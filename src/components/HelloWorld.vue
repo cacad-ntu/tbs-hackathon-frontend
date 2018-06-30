@@ -80,12 +80,22 @@
         </a>
       </li>
     </ul>
+    <ether-component>
+    </ether-component>
   </div>
 </template>
 
 <script>
+
+import EtherComponent from '@/components/EtherComponent';
+
+
 export default {
+  components: {EtherComponent},
   name: 'HelloWorld',
+  component: {
+    'ether-component': EtherComponent
+  },
   data() {
     return {
       msg: 'Welcome to Your Vue.js App',

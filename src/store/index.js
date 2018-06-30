@@ -4,6 +4,7 @@ import Vuex from 'vuex';
 Vue.use(Vuex);
 
 const state = {
+  // store first 2 accounts from the block-chain network
   accounts: {
     "address1": 1000.00,
     "address2": 1000.00,
@@ -16,6 +17,7 @@ const state = {
       ["address5", 10.00],
     ],
   },
+  authorContract: {}
 };
 
 const getters = {
@@ -24,13 +26,23 @@ const getters = {
   },
   getPost(state) {
     return state.post;
-  }
+  },
+  getAuthorContract(state) {
+    return state.authorContract
+  },
 };
 
 const mutations = {
   donate(state, address, donation) {
     // Update top donator
 
+  },
+  updateAuthorContract: (state, authorContract) => {
+    state.authorContract = authorContract;
+  },
+
+  updateAccounts: (state, accounts) => {
+    state.accounts = accounts;
   },
 };
 
