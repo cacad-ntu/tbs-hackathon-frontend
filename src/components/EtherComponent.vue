@@ -15,7 +15,6 @@ export default {
   mounted() {
     // connected with the local block chain serv
     const web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:7545'));
-    const webTest = new Web3(new Web3.providers.HttpProvider('http://localhost:9545'));
 
     let authorAbi=[
       [{"constant":false,"inputs":[{"name":"to","type":"address"}],"name":"donate","outputs":[],"payable":true,"stateMutability":"payable","type":"function"}]
